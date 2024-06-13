@@ -1,0 +1,283 @@
+<sdf version='1.7'>
+  <model name='Danaus12_Pendulum_'>
+    <link name='base_link'>
+      <inertial>
+        <pose>0.00344 -5e-06 -0.017794 0 -0 0</pose>
+        <mass>0.239705</mass>
+        <inertia>
+          <ixx>0.000488179</ixx>
+          <ixy>-3.98642e-09</ixy>
+          <ixz>2.21151e-09</ixz>
+          <iyy>0.000481841</iyy>
+          <iyz>6.02916e-11</iyz>
+          <izz>0.000952305</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://Danaus12_Pendulum_/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://Danaus12_Pendulum_/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='pendulum_cont' type='revolute'>
+      <pose relative_to='base_link'>0 0 0 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>penulum</child>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='penulum'>
+      <pose relative_to='pendulum_cont'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.001995 0.000135 0.531659 0 -0 0</pose>
+        <mass>0.0202176</mass>
+        <inertia>
+          <ixx>0.00168494</ixx>
+          <ixy>-4.83202e-39</ixy>
+          <ixz>-2.06144e-19</ixz>
+          <iyy>0.00168494</iyy>
+          <iyz>0</iyz>
+          <izz>2.68861e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='penulum_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://Danaus12_Pendulum_/meshes/penulum.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='penulum_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://Danaus12_Pendulum_/meshes/penulum.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='rotor_0_cont' type='revolute'>
+      <pose relative_to='base_link'>0.063592 -0.088805 0.003519 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>rotor_0</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='rotor_0'>
+      <pose relative_to='rotor_0_cont'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 -3e-06 -0.001827 0 -0 0</pose>
+        <mass>0.00327607</mass>
+        <inertia>
+          <ixx>1.05267e-06</ixx>
+          <ixy>-2.44294e-10</ixy>
+          <ixz>-1.73738e-11</ixz>
+          <iyy>1.05269e-06</iyy>
+          <iyz>1.5733e-11</iyz>
+          <izz>2.08148e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='rotor_0_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://Danaus12_Pendulum_/meshes/rotor_0.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='rotor_0_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://Danaus12_Pendulum_/meshes/rotor_0.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='rotor_1_cont' type='revolute'>
+      <pose relative_to='base_link'>-0.071008 0.088795 0.003519 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>rotor_1</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='rotor_1'>
+      <pose relative_to='rotor_1_cont'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>3e-06 3e-06 -0.001827 0 -0 0</pose>
+        <mass>0.00327607</mass>
+        <inertia>
+          <ixx>1.05296e-06</ixx>
+          <ixy>1.02574e-10</ixy>
+          <ixz>-1.06728e-11</ixz>
+          <iyy>1.05265e-06</iyy>
+          <iyz>-8.41636e-12</iyz>
+          <izz>2.08173e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='rotor_1_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://Danaus12_Pendulum_/meshes/rotor_1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='rotor_1_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://Danaus12_Pendulum_/meshes/rotor_1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='rotor_2_cont' type='revolute'>
+      <pose relative_to='base_link'>0.063592 0.088795 0.003519 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>rotor_2</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='rotor_2'>
+      <pose relative_to='rotor_2_cont'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>7e-06 7e-06 -0.001826 0 -0 0</pose>
+        <mass>0.00327422</mass>
+        <inertia>
+          <ixx>1.05218e-06</ixx>
+          <ixy>2.8174e-10</ixy>
+          <ixz>5.49768e-11</ixz>
+          <iyy>1.05202e-06</iyy>
+          <iyz>2.45974e-11</iyz>
+          <izz>2.08037e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='rotor_2_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://Danaus12_Pendulum_/meshes/rotor_2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='rotor_2_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://Danaus12_Pendulum_/meshes/rotor_2.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='rotor_3_cont' type='revolute'>
+      <pose relative_to='base_link'>-0.071008 -0.088805 0.003519 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>rotor_3</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='rotor_3'>
+      <pose relative_to='rotor_3_cont'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-7e-06 5e-06 -0.001825 0 -0 0</pose>
+        <mass>0.00327338</mass>
+        <inertia>
+          <ixx>1.05168e-06</ixx>
+          <ixy>-5.17105e-11</ixy>
+          <ixz>-3.87398e-11</ixz>
+          <iyy>1.05222e-06</iyy>
+          <iyz>4.53986e-11</iyz>
+          <izz>2.08008e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='rotor_3_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://Danaus12_Pendulum_/meshes/rotor_3.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='rotor_3_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://Danaus12_Pendulum_/meshes/rotor_3.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Danaus12_Pendulum_">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00343974168600599 -5.04133188575572E-06 -0.0177940350494326"
+        rpy="0 0 0" />
+      <mass
+        value="0.23970472668475" />
+      <inertia
+        ixx="0.000488178970275205"
+        ixy="-3.98641930276618E-09"
+        ixz="2.21151237667253E-09"
+        iyy="0.000481840685715239"
+        iyz="6.02916496000408E-11"
+        izz="0.00095230470313027" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Danaus12_Pendulum_/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Danaus12_Pendulum_/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="rotor_0">
+    <inertial>
+      <origin
+        xyz="2.25634125508578E-07 -3.22909815131389E-06 -0.0018271728838298"
+        rpy="0 0 0" />
+      <mass
+        value="0.00327607155092553" />
+      <inertia
+        ixx="1.05266612351156E-06"
+        ixy="-2.4429431765465E-10"
+        ixz="-1.73737611767494E-11"
+        iyy="1.05269113757569E-06"
+        iyz="1.57329542719105E-11"
+        izz="2.08148171948921E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Danaus12_Pendulum_/meshes/rotor_0.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Danaus12_Pendulum_/meshes/rotor_0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rotor_0_cont"
+    type="continuous">
+    <origin
+      xyz="0.063591705338684 -0.0888054131851234 0.00351934870240115"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rotor_0" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="rotor_1">
+    <inertial>
+      <origin
+        xyz="3.02809850596941E-06 3.4514432618038E-06 -0.00182726825229539"
+        rpy="0 0 0" />
+      <mass
+        value="0.00327607039688564" />
+      <inertia
+        ixx="1.05296085907096E-06"
+        ixy="1.02574486959835E-10"
+        ixz="-1.06728024508223E-11"
+        iyy="1.05265001130988E-06"
+        iyz="-8.41636129429863E-12"
+        izz="2.08173246000356E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Danaus12_Pendulum_/meshes/rotor_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Danaus12_Pendulum_/meshes/rotor_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rotor_1_cont"
+    type="continuous">
+    <origin
+      xyz="-0.0710082946613161 0.0887945868148765 0.00351934870240115"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rotor_1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="rotor_2">
+    <inertial>
+      <origin
+        xyz="6.95315623548687E-06 7.12259095676793E-06 -0.00182551310212963"
+        rpy="0 0 0" />
+      <mass
+        value="0.00327422234729908" />
+      <inertia
+        ixx="1.05217973978037E-06"
+        ixy="2.81739556417709E-10"
+        ixz="5.4976777984107E-11"
+        iyy="1.05202124763363E-06"
+        iyz="2.4597371919475E-11"
+        izz="2.08036722966604E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Danaus12_Pendulum_/meshes/rotor_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 1 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Danaus12_Pendulum_/meshes/rotor_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rotor_2_cont"
+    type="continuous">
+    <origin
+      xyz="0.063591705338684 0.0887945868148765 0.00351934870240115"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rotor_2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="rotor_3">
+    <inertial>
+      <origin
+        xyz="-6.78619359993637E-06 4.93327782169484E-06 -0.00182508864641822"
+        rpy="0 0 0" />
+      <mass
+        value="0.00327337770596971" />
+      <inertia
+        ixx="1.05168117902021E-06"
+        ixy="-5.17104505014648E-11"
+        ixz="-3.87398046397015E-11"
+        iyy="1.05222305458704E-06"
+        iyz="4.539856976763E-11"
+        izz="2.08008132030942E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Danaus12_Pendulum_/meshes/rotor_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 1 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Danaus12_Pendulum_/meshes/rotor_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rotor_3_cont"
+    type="continuous">
+    <origin
+      xyz="-0.071008 -0.088805 0.0035193"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rotor_3" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="penulum">
+    <inertial>
+      <origin
+        xyz="-0.00199477442176733 0.00013520118565931 0.531659348702401"
+        rpy="0 0 0" />
+      <mass
+        value="0.0202176284159901" />
+      <inertia
+        ixx="0.00168493679865474"
+        ixy="-4.8320227922954E-39"
+        ixz="-2.06143831191762E-19"
+        iyy="0.00168493679865474"
+        iyz="0"
+        izz="2.68861311130881E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Danaus12_Pendulum_/meshes/penulum.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Danaus12_Pendulum_/meshes/penulum.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pendulum_cont"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="penulum" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
